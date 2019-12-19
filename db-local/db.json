@@ -1,0 +1,20 @@
+{
+  "accounts": [
+    {
+      "propietario": "santiagor",
+      "saldo": 10000
+    },
+    {
+      "propietario": "santiagor",
+      "saldo": 10000,
+      "otra": "Otra vaina",
+      "id": 1
+    },
+    {
+      "propietario": "santiagor",
+      "saldo": 10000,
+      "otra": "Otra vaina",
+      "id": 2
+    }
+  ]
+}
