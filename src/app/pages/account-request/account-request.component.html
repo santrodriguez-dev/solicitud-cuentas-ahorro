@@ -1,0 +1,34 @@
+<form nz-form [nzLayout]="'horizontal'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="null">Field A</nz-form-label>
+    <nz-form-control [nzSpan]="null" nzErrorTip="Please input your username!">
+      <input nz-input formControlName="saldo" placeholder="input placeholder" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item [nzGutter]="8">
+    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
+      <input formControlName="userName" nz-input placeholder="Username" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
+      <input formControlName="userName" nz-input placeholder="Username" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
+      <input formControlName="userName" nz-input placeholder="Username" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSm]="6" nzErrorTip="Please input your Password!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input formControlName="password" nz-input type="password" placeholder="Password" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <button nz-button nzType="primary" [disabled]="false">Log in</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

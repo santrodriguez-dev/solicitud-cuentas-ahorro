@@ -27,4 +27,12 @@ export class AccountService {
   getbyCode(code: number) {
     return this.http.get<any[]>(`${this.url}accounts/${code}`).pipe(take(1))
   }
+
+  /**
+  * Obtiene lista de todas las cuentas creadas
+  */
+  saveRequest(request: any) {
+    return this.http.post<any[]>(`${this.url}accounts/`, request).pipe(take(1))
+  }
+
 }
