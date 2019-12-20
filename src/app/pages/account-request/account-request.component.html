@@ -1,34 +1,66 @@
+<h2>Solicitud cuenta de ahorro</h2>
+
 <form nz-form [nzLayout]="'horizontal'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
-  <nz-form-item>
-    <nz-form-label [nzSpan]="null">Field A</nz-form-label>
-    <nz-form-control [nzSpan]="null" nzErrorTip="Please input your username!">
-      <input nz-input formControlName="saldo" placeholder="input placeholder" />
-    </nz-form-control>
-  </nz-form-item>
   <nz-form-item [nzGutter]="8">
-    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
-      <input formControlName="userName" nz-input placeholder="Username" />
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Nombre!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="name">Nombre</nz-form-label>
+      <input formControlName="name" nz-input id="name" />
     </nz-form-control>
-    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
-      <input formControlName="userName" nz-input placeholder="Username" />
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Género!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="gender">Género</nz-form-label>
+      <input formControlName="gender" nz-input id="gender" />
     </nz-form-control>
-    <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">E-mail</nz-form-label>
-      <input formControlName="userName" nz-input placeholder="Username" />
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu documento!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="document">Número de documento</nz-form-label>
+      <input formControlName="document" nz-input id="document" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Fecha de nacimiento!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="birthDate">Fecha de nacimiento</nz-form-label>
+      <nz-date-picker formControlName="birthDate" id="birthDate"></nz-date-picker>
+      <!-- <input formControlName="birthDate" nz-input id="birthDate" /> -->
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Ciudad!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="city">Ciudad</nz-form-label>
+      <!-- <input formControlName="city" nz-input id="city" /> -->
+      <nz-select id="gender" formControlName="city" nzPlaceHolder="Selecciona una ciudad">
+        <nz-option nzValue="Bogota" nzLabel="Bogotá"></nz-option>
+        <nz-option nzValue="Medellin" nzLabel="Medellín"></nz-option>
+      </nz-select>
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa in correo válido">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Correo</nz-form-label>
+      <input formControlName="email" nz-input id="email" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Dirección!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="address">Dirección</nz-form-label>
+      <input formControlName="address" nz-input id="address" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Teléfono!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="phone">Teléfono</nz-form-label>
+      <input formControlName="phone" nz-input id="phone" />
+    </nz-form-control>
+
+  </nz-form-item>
+
+  <nz-form-item [nzGutter]="8">
+    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa un Tipo de cuenta!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Tipo de cuenta</nz-form-label>
+      <input formControlName="userName" nz-input placeholder="Tipo de cuenta" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Saldo inicial!">
+      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Saldo inicial</nz-form-label>
+      <input formControlName="userName" nz-input placeholder="Saldo inicial" />
     </nz-form-control>
   </nz-form-item>
-  <nz-form-item>
-    <nz-form-control [nzSm]="6" nzErrorTip="Please input your Password!">
-      <nz-input-group nzPrefixIcon="lock">
-        <input formControlName="password" nz-input type="password" placeholder="Password" />
-      </nz-input-group>
+
+  <nz-form-item [nzGutter]="8" NzGridType="flex" nzAlign="end" nzJustify="end">
+    <nz-form-control [nzSpan]="6">
+      <button nz-button nzType="primary" [disabled]="false" [nzLoading]="isLoading">
+        <i nz-icon nzType="check" nzTheme="outline"></i>Enviar solicitud</button>
     </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control>
-      <button nz-button nzType="primary" [disabled]="false">Log in</button>
+    <nz-form-control [nzSpan]="6">
+      <button nz-button type="button" nzType="danger" [disabled]="false" (click)="resetForm()">
+        <i nz-icon nzType="close"></i>Reestablecer</button>
     </nz-form-control>
   </nz-form-item>
 </form>

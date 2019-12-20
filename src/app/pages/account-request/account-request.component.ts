@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class AccountRequestComponent implements OnInit {
 
   validateForm: FormGroup;
+  isLoading = false
 
   constructor(private fb: FormBuilder,
     private nZMessage: NzMessageService,
@@ -24,10 +25,15 @@ export class AccountRequestComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
+      name: [null, [Validators.required]],
+      gender: [null, [Validators.required]],
+      document: [null, [Validators.required]],
       userName: [null, [Validators.required]],
-      password: [null, [Validators.required]],
-      saldo: [null, []],
-      remember: [true]
+      city: [null, [Validators.required]],
+      email: [null, [Validators.required, Validators.email]],
+      address: [null, [Validators.required]],
+      phone: [null, [Validators.required]],
+      birthDate: [null, [Validators.required]],
     });
   }
 
@@ -38,19 +44,25 @@ export class AccountRequestComponent implements OnInit {
     }
     if (!this.validateForm.valid) return
     console.log(this.validateForm);
-    this.saveRequest()
+    this.saveRequest(this.validateForm.value)
   }
 
-  saveRequest() {
-    const request = {
-      "propietario": "santiagor",
-      "saldo": 10000
-    }
-    this.accountService.saveRequest(request).subscribe(response => {
+  saveRequest(formData) {
+    this.isLoading = true
+    this.accountService.saveRequest(formData).subscribe(response => {
+      this.isLoading = false
       console.log(response);
       this.nZMessage.success('La solicitud se ha guardado exitosamente')
       this.router.navigate(['account-list']);
+    }, err => {
+      this.isLoading = false
+      this.nZMessage.error('No es posible establecer la comunicación con el servidor')
+      console.error(err);
     })
+  }
+
+  resetForm() {
+    this.validateForm.reset()
   }
 
 }
