@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+// Services
 import { AccountService } from 'src/app/services/account.service';
 import { NzMessageService } from 'ng-zorro-antd';
+
+// Models
+import { AccountRequest } from 'src/app/models/account';
 
 @Component({
   selector: 'app-account-list',
@@ -11,7 +14,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 export class AccountListComponent implements OnInit {
 
   isLoading: boolean
-  accountList = []
+  accountList: AccountRequest[] = []
 
   constructor(private accountService: AccountService,
     private nZMessage: NzMessageService) { }
@@ -25,10 +28,9 @@ export class AccountListComponent implements OnInit {
     this.accountService.getAll().subscribe(accounts => {
       this.isLoading = false
       this.accountList = accounts
-      console.log(accounts);
     }, err => {
       this.isLoading = false
-      this.nZMessage.error('No es posible establecer la comunicación con el servidor')
+      this.nZMessage.error('Ha ocurrido un error con el servidor', { nzDuration: 8000 })
       console.error(err);
     })
   }

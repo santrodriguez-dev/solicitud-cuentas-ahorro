@@ -2,65 +2,80 @@
 
 <form nz-form [nzLayout]="'horizontal'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
   <nz-form-item [nzGutter]="8">
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Nombre!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="name">Nombre</nz-form-label>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="name">Nombre completo</nz-form-label>
       <input formControlName="name" nz-input id="name" />
     </nz-form-control>
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Género!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="gender">Género</nz-form-label>
-      <input formControlName="gender" nz-input id="gender" />
-    </nz-form-control>
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu documento!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="document">Número de documento</nz-form-label>
-      <input formControlName="document" nz-input id="document" />
-    </nz-form-control>
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Fecha de nacimiento!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="birthDate">Fecha de nacimiento</nz-form-label>
-      <nz-date-picker formControlName="birthDate" id="birthDate"></nz-date-picker>
-      <!-- <input formControlName="birthDate" nz-input id="birthDate" /> -->
-    </nz-form-control>
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa tu Ciudad!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="city">Ciudad</nz-form-label>
-      <!-- <input formControlName="city" nz-input id="city" /> -->
-      <nz-select id="gender" formControlName="city" nzPlaceHolder="Selecciona una ciudad">
-        <nz-option nzValue="Bogota" nzLabel="Bogotá"></nz-option>
-        <nz-option nzValue="Medellin" nzLabel="Medellín"></nz-option>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="gender">Género</nz-form-label>
+      <nz-select id="gender" formControlName="gender">
+        <nz-option nzValue="m" nzLabel="Masculino"></nz-option>
+        <nz-option nzValue="f" nzLabel="Femenino"></nz-option>
       </nz-select>
     </nz-form-control>
-    <nz-form-control [nzSpan]="8" nzErrorTip="Por favor ingresa in correo válido">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Correo</nz-form-label>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="document">Número de documento</nz-form-label>
+      <input formControlName="document" nz-input id="document" />
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="birthDate">Fecha de nacimiento</nz-form-label>
+      <nz-date-picker formControlName="birthDate" id="birthDate"></nz-date-picker>
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="city">Ciudad</nz-form-label>
+      <nz-select id="city" formControlName="city">
+        <nz-option nzValue="Bogota" nzLabel="Bogotá"></nz-option>
+        <nz-option nzValue="Medellin" nzLabel="Medellín"></nz-option>
+        <nz-option nzValue="Cali" nzLabel="Cali"></nz-option>
+        <nz-option nzValue="Villavicencio" nzLabel="Villavicencio"></nz-option>
+        <nz-option nzValue="Bucaramanga" nzLabel="Bucaramanga"></nz-option>
+        <nz-option nzValue="Cartagena" nzLabel="Cartagena"></nz-option>
+        <nz-option nzValue="Manizales" nzLabel="Manizales"></nz-option>
+      </nz-select>
+    </nz-form-control>
+    <nz-form-control [nzSpan]="8" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="email">Correo</nz-form-label>
       <input formControlName="email" nz-input id="email" />
     </nz-form-control>
-    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Dirección!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="address">Dirección</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="address">Dirección</nz-form-label>
       <input formControlName="address" nz-input id="address" />
     </nz-form-control>
-    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Teléfono!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="phone">Teléfono</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="phone">Teléfono</nz-form-label>
       <input formControlName="phone" nz-input id="phone" />
     </nz-form-control>
 
+    <nz-form-control [nzSpan]="12" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="accountType">Tipo de cuenta</nz-form-label>
+      <nz-select id="accountType" formControlName="accountType">
+        <nz-option nzValue="CI" nzLabel="Cuentas individuales"></nz-option>
+        <nz-option nzValue="CC" nzLabel="Cuentas colectivas"></nz-option>
+        <nz-option nzValue="CCO" nzLabel="Cuentas conjuntas"></nz-option>
+        <nz-option nzValue="​CEN" nzLabel="​Cuenta especial de nómina"></nz-option>
+        <nz-option nzValue="CAC" nzLabel="​Cuenta de ahorro contractual"></nz-option>
+        <nz-option nzValue="​CAV" nzLabel="​Cuenta de ahorro para la vivienda">
+        </nz-option>
+        <nz-option nzValue="AFC" nzLabel="​Cuenta de ahorro para el fomento de la construcción (AFC)"></nz-option>
+        <nz-option nzValue="CAE" nzLabel="​Cuenta de ahorro electrónica."></nz-option>
+        <nz-option nzValue="​CAT" nzLabel="​Cuenta de ahorro de trámite simplificado"></nz-option>
+      </nz-select>
+    </nz-form-control>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Campo obligatorio">
+      <nz-form-label [nzSpan]="24" nzFor="initialbalance">Saldo inicial</nz-form-label>
+      <input id="initialbalance" type="number" formControlName="initialbalance" nz-input />
+    </nz-form-control>
   </nz-form-item>
 
-  <nz-form-item [nzGutter]="8">
-    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa un Tipo de cuenta!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Tipo de cuenta</nz-form-label>
-      <input formControlName="userName" nz-input placeholder="Tipo de cuenta" />
-    </nz-form-control>
-    <nz-form-control [nzSpan]="12" nzErrorTip="Por favor ingresa tu Saldo inicial!">
-      <nz-form-label [nzSpan]="null" nzRequired nzFor="email">Saldo inicial</nz-form-label>
-      <input formControlName="userName" nz-input placeholder="Saldo inicial" />
-    </nz-form-control>
-  </nz-form-item>
+  <div class="buttons-container">
+    <button nz-button nzType="primary" [disabled]="false" [nzLoading]="isLoading">
+      <i nz-icon nzType="check" nzTheme="outline"></i>
+      {{editableMode?'Actualizar solicitud':'Enviar solicitud'}}
+    </button>
+    <button nz-button type="button" nzType="danger" [disabled]="isLoading" (click)="resetForm()">
+      <i nz-icon nzType="close"></i>
+      Reestablecer
+    </button>
+  </div>
 
-  <nz-form-item [nzGutter]="8" NzGridType="flex" nzAlign="end" nzJustify="end">
-    <nz-form-control [nzSpan]="6">
-      <button nz-button nzType="primary" [disabled]="false" [nzLoading]="isLoading">
-        <i nz-icon nzType="check" nzTheme="outline"></i>Enviar solicitud</button>
-    </nz-form-control>
-    <nz-form-control [nzSpan]="6">
-      <button nz-button type="button" nzType="danger" [disabled]="false" (click)="resetForm()">
-        <i nz-icon nzType="close"></i>Reestablecer</button>
-    </nz-form-control>
-  </nz-form-item>
 </form>

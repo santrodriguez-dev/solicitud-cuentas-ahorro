@@ -1,0 +1,23 @@
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons-container {
+    flex-direction: column;
+    button {
+      margin-left: 0;
+    }
+    button:first-of-type {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+::ng-deep .ant-calendar-picker  {
+  width: 100%;
+}

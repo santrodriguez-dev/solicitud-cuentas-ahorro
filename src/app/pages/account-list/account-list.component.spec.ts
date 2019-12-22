@@ -1,6 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { AccountListComponent } from './account-list.component';
+
+import { NgZorroModule } from "../../shared/ng-zorro/ng-zorro.module";
+import { HttpClientModule } from '@angular/common/http';
+import { AccountRequest } from 'src/app/models/account';
+import { RouterModule } from '@angular/router';
+
 
 describe('AccountListComponent', () => {
   let component: AccountListComponent;
@@ -8,9 +14,10 @@ describe('AccountListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccountListComponent ]
+      imports: [NgZorroModule, HttpClientModule, RouterModule],
+      declarations: [AccountListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +26,4 @@ describe('AccountListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

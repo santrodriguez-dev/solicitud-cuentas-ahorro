@@ -1,21 +1,28 @@
-<nz-table #basicTable [nzData]="accountList">
+<h2>Cuentas registradas</h2>
+
+<nz-table #basicTable [nzData]="accountList" [nzLoading]="isLoading">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Address</th>
-      <th>Action</th>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Numero de documento</th>
+      <th>Fecha de solicitud</th>
+      <th>Saldo disponible</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.id }}</td>
       <td>{{ data.name }}</td>
-      <td>{{ data.age }}</td>
-      <td>{{ data.address }}</td>
+      <td>{{ data.document }}</td>
+      <td>{{ data.requestDate | date: 'dd/MM/yyyy'}}</td>
+      <td>{{ data.initialbalance | currency}}</td>
       <td>
-        <a>Action 一 {{ data.name }}</a>
-        <nz-divider nzType="vertical"></nz-divider>
-        <a>Delete</a>
+        <a nz-button [routerLink]="['/account-request', data.id]" type="button" nzType="outline">
+          <i nz-icon nzType="eye"></i>
+          Ver mas
+        </a>
       </td>
     </tr>
   </tbody>

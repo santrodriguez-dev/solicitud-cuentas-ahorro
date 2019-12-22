@@ -1,56 +1,28 @@
-<nz-layout class="app-layout">
-  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
-    [nzTrigger]="null">
-    <div class="sidebar-logo">
-      <a>
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <!-- <h1>Cuentas de ahorro</h1> -->
-      </a>
+<nz-layout class="main-container">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" nzWidth="200px">
+    <div class="logo">
+      <img [src]="getImage()" alt="">
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <!-- <li nz-menu-item nzMatchRouter>
-        <a routerLink="/welcome">Welcome</a>
-      </li>
-      <li nz-menu-item nzMatchRouter>
-        <a routerLink="/account-request">Monitor</a>
-      </li>
-      <li nz-menu-item nzMatchRouter>
-        <a routerLink="/account-list">account-list</a>
-      </li> -->
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
-        <ul>
-          <!-- <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
-          </li> -->
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/account-request">Solicitar cuenta</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/account-list">Cuentas</a>
-          </li>
-        </ul>
-      </li>
-      <!-- <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
-          </li>
-        </ul>
-      </li> -->
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed" class="sider-list">
+      <a nz-menu-item nzMatchRouter routerLink="/account-request">
+        <i nz-icon nzType="form"></i>
+        <span>Solicitud de cuenta</span>
+      </a>
+      <a nz-menu-item nzMatchRouter routerLink="/account-list">
+        <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+        <span>Cuentas</span>
+      </a>
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-        </span>
-      </div>
+    <nz-header class="main-header">
+      <h2>Cuentas de ahorro</h2>
     </nz-header>
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
+    <!-- <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer> -->
   </nz-layout>
 </nz-layout>

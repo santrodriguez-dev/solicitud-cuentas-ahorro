@@ -1,170 +1,74 @@
 {
   "accounts": [
     {
-      "propietario": "santiagor",
-      "saldo": 10000
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "otra": "Otra vaina",
+      "name": "Santiago Ivan Rodriguez Martin",
+      "gender": "m",
+      "document": "1123126556",
+      "city": "Medellin",
+      "email": "srodriguezm95@gmail.com",
+      "address": "Cll 89 sur N 50",
+      "phone": "32155856756",
+      "birthDate": "2019-12-11T16:32:27.312Z",
+      "accountType": "CAE",
+      "initialbalance": 500000,
+      "requestDate": "2019-12-22T02:27:20.128Z",
       "id": 1
     },
     {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "otra": "Otra vaina",
+      "name": "Jorge lloreda",
+      "gender": "m",
+      "document": "102622476884",
+      "city": "Bogota",
+      "email": "srodriguezm95@gmail.com",
+      "address": "Cra 118 N 89 a",
+      "phone": "319524469",
+      "birthDate": "2019-12-12T16:38:42.907Z",
+      "accountType": "CCO",
+      "initialbalance": 400000,
+      "requestDate": "2019-12-22T01:31:35.716Z",
       "id": 2
     },
     {
-      "propietario": "santiagor",
-      "saldo": 10000,
+      "name": "Enrique Peña",
+      "gender": "m",
+      "document": "95100332444",
+      "city": "Bogota",
+      "email": "srodriguezm95@gmail.com",
+      "address": "46",
+      "phone": "54",
+      "birthDate": "2019-12-25T18:39:16.570Z",
+      "accountType": "​CEN",
+      "initialbalance": 350000,
+      "requestDate": "2019-12-22T01:31:04.405Z",
       "id": 3
     },
     {
-      "propietario": "santiagor",
-      "saldo": 10000,
+      "name": "Camilo Bustos",
+      "gender": "f",
+      "document": "10265565698",
+      "city": "Medellin",
+      "email": "srodriguezm95@gmail.com",
+      "address": "Calle 200 N 56",
+      "phone": "654698797",
+      "birthDate": "2019-12-03T18:41:42.032Z",
+      "accountType": "CAC",
+      "initialbalance": 580000,
+      "requestDate": "2019-12-22T01:32:04.681Z",
       "id": 4
     },
     {
-      "propietario": "santiagor",
-      "saldo": 10000,
+      "name": "Natalia Restrepo",
+      "gender": "f",
+      "document": "1002265468",
+      "city": "Villavicencio",
+      "email": "nataliar@gmail.com",
+      "address": "Clle 45 N 7",
+      "phone": "314478454564",
+      "birthDate": "1990-12-13T02:28:35.074Z",
+      "accountType": "​CEN",
+      "initialbalance": 800000,
+      "requestDate": "2019-12-22T02:29:29.908Z",
       "id": 5
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 6
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 7
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 8
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 9
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 10
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 11
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 12
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 13
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 14
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 15
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 16
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 17
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 18
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 19
-    },
-    {
-      "propietario": "santiagor",
-      "saldo": 10000,
-      "id": 20
-    },
-    {
-      "name": "454456456",
-      "gender": "456",
-      "document": "456",
-      "userName": "456",
-      "city": "456",
-      "email": "456",
-      "address": "456",
-      "phone": "456",
-      "birthDate": "456",
-      "id": 21
-    },
-    {
-      "name": "65465",
-      "gender": "465",
-      "document": "4",
-      "userName": "54",
-      "city": "564654",
-      "email": "6546",
-      "address": "546",
-      "phone": "54654",
-      "birthDate": "654654645",
-      "id": 22
-    },
-    {
-      "name": "56465",
-      "gender": "4654",
-      "document": "645",
-      "userName": "456456",
-      "city": "6456",
-      "email": "54@dfgdf",
-      "address": "645",
-      "phone": "456",
-      "birthDate": "2019-02-13T20:26:11.538Z",
-      "id": 23
-    },
-    {
-      "name": "654654",
-      "gender": "645",
-      "document": "456",
-      "userName": "456",
-      "city": "Bogota",
-      "email": "456@sdfgsdgdfg",
-      "address": "456",
-      "phone": "456",
-      "birthDate": "2019-12-18T20:29:33.576Z",
-      "id": 24
-    },
-    {
-      "name": "fghfgh",
-      "gender": "fghf",
-      "document": "ghfgh",
-      "userName": "6546",
-      "city": "Bogota",
-      "email": "fgh@fghfghfg",
-      "address": "6",
-      "phone": "54654654",
-      "birthDate": "2019-12-17T20:48:31.188Z",
-      "id": 25
     }
   ]
 }

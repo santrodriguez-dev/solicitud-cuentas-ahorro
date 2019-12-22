@@ -1,7 +1,7 @@
-import { Account } from './account';
+import { AccountRequest } from './account';
 
 describe('Account', () => {
   it('should create an instance', () => {
-    expect(new Account()).toBeTruthy();
+    expect(new AccountRequest()).toBeTruthy();
   });
 });

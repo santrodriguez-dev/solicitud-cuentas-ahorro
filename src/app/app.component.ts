@@ -12,4 +12,7 @@ export class AppComponent {
 
   ngOnInit(): void { }
 
+  getImage() {
+    return `assets/images/${this.isCollapsed ? 'av_villas_1.jpg' : 'logo_avvillas.jpg'}`
+  }
 }
