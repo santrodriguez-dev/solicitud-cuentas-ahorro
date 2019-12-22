@@ -1,6 +1,6 @@
 <h2>Cuentas registradas</h2>
 
-<nz-table #basicTable [nzData]="accountList" [nzLoading]="isLoading">
+<nz-table #basicTable [nzData]="accountList" [nzLoading]="isLoading" [nzPageSize]="8">
   <thead>
     <tr>
       <th>Id</th>
@@ -18,11 +18,13 @@
       <td>{{ data.document }}</td>
       <td>{{ data.requestDate | date: 'dd/MM/yyyy'}}</td>
       <td>{{ data.initialbalance | currency}}</td>
-      <td>
-        <a nz-button [routerLink]="['/account-request', data.id]" type="button" nzType="outline">
+      <td class="container_buttons">
+        <a nz-button [routerLink]="['/account-request', data.id]" type="button" nzType="primary" class="view_more_button">
           <i nz-icon nzType="eye"></i>
-          Ver mas
         </a>
+        <button nz-button type="button" nzType="danger" (click)="deleteAccount(data.id)">
+          <i nz-icon nzType="delete"></i>
+        </button>
       </td>
     </tr>
   </tbody>

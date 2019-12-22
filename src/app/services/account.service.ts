@@ -13,7 +13,7 @@ import { AccountRequest } from '../models/account';
 })
 export class AccountService {
 
-  private url = 'http://localhost:4000/';
+  private url = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
 
@@ -41,6 +41,14 @@ export class AccountService {
       return this.http.post<AccountRequest[]>(`${this.url}accounts`, request).pipe(take(1))
     }
     return this.http.put<AccountRequest[]>(`${this.url}accounts/${request.id}`, request).pipe(take(1))
+  }
+
+  /**
+   * Elimina un registro de tipo AccountRequest
+   * @param id codigo de cuenta
+   */
+  deleteRequest(id: number) {
+    return this.http.delete<AccountRequest[]>(`${this.url}accounts/${id}`).pipe(take(1))
   }
 
 }
